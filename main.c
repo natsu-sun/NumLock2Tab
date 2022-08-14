@@ -8,8 +8,10 @@ int main()
     LONG result;
 
     result = RegCreateKeyEx(
+        // HKEY_LOCAL_MACHINE,
+        // "SYSTEM\\CurrentControlSet\\Control\\Keyboard Layout",
         HKEY_CURRENT_USER,
-        "System\\CurrentControlSet\\Control\\Keyboard Layout",
+        "Keyboard Layout",
         0, NULL,
         //REG_OPTION_NON_VOLATILE, // 不揮発性
         REG_OPTION_VOLATILE, // 揮発性 (再起動で消える)
